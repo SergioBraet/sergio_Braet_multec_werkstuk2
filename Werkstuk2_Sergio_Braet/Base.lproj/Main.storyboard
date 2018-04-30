@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Werkstuk2_Sergio_Braet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villo" translatesAutoresizingMaskIntoConstraints="NO" id="IvD-b8-nBm">
+                                <rect key="frame" x="115" y="9" width="145" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="BKC-1f-bl8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-X3-3Lu">
+                                <rect key="frame" x="20" y="597" width="335" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="eex-73-MO5"/>
+                                </constraints>
+                                <state key="normal" title="Updaten"/>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75w-WD-fg1">
+                                <rect key="frame" x="0.0" y="90" width="375" height="499"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.73333333333333328" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="top" secondItem="IvD-b8-nBm" secondAttribute="bottom" constant="17" id="1Sj-ZG-4Mc"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="centerX" secondItem="QiZ-X3-3Lu" secondAttribute="centerX" id="5wO-So-ovm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QiZ-X3-3Lu" secondAttribute="bottom" constant="18" id="DFx-Fh-yc6"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F2v-Ey-hsI"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="9" id="HoT-Yb-Svr"/>
+                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="KiH-9H-Kvo"/>
+                            <constraint firstAttribute="trailing" secondItem="75w-WD-fg1" secondAttribute="trailing" id="Kwp-Ms-vW8"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="UOD-q7-NRo"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="centerX" secondItem="75w-WD-fg1" secondAttribute="centerX" id="vW9-Aw-lC8"/>
+                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="top" secondItem="75w-WD-fg1" secondAttribute="bottom" constant="8" symbolic="YES" id="xrH-Mf-hbO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapview" destination="75w-WD-fg1" id="KTt-SD-OrV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Villo" width="419" height="263"/>
+    </resources>
 </document>

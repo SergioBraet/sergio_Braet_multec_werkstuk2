@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F00338920971A8900A6512E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F00338820971A8900A6512E /* MapKit.framework */; };
+		3F00338B20971D8600A6512E /* annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00338A20971D8600A6512E /* annotation.swift */; };
 		3F50E3282095F42400DDA2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50E3272095F42400DDA2B7 /* AppDelegate.swift */; };
 		3F50E32A2095F42400DDA2B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50E3292095F42400DDA2B7 /* ViewController.swift */; };
 		3F50E32D2095F42400DDA2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50E32B2095F42400DDA2B7 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		3F50E3352095F42400DDA2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50E3332095F42400DDA2B7 /* LaunchScreen.storyboard */; };
 		3F50E3402095F42500DDA2B7 /* Werkstuk2_Sergio_BraetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50E33F2095F42500DDA2B7 /* Werkstuk2_Sergio_BraetTests.swift */; };
 		3F50E34B2095F42500DDA2B7 /* Werkstuk2_Sergio_BraetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50E34A2095F42500DDA2B7 /* Werkstuk2_Sergio_BraetUITests.swift */; };
+		3FFB365120970A4700B631FC /* Fiestenstalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB365020970A4700B631FC /* Fiestenstalling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F00338820971A8900A6512E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F00338A20971D8600A6512E /* annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = annotation.swift; sourceTree = "<group>"; };
 		3F50E3242095F42400DDA2B7 /* Werkstuk2_Sergio_Braet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werkstuk2_Sergio_Braet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50E3272095F42400DDA2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F50E3292095F42400DDA2B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		3F50E3462095F42500DDA2B7 /* Werkstuk2_Sergio_BraetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Werkstuk2_Sergio_BraetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50E34A2095F42500DDA2B7 /* Werkstuk2_Sergio_BraetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Werkstuk2_Sergio_BraetUITests.swift; sourceTree = "<group>"; };
 		3F50E34C2095F42500DDA2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FFB365020970A4700B631FC /* Fiestenstalling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fiestenstalling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F00338920971A8900A6512E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F00338720971A8900A6512E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F00338820971A8900A6512E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F50E31B2095F42400DDA2B7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,7 @@
 				3F50E33E2095F42500DDA2B7 /* Werkstuk2_Sergio_BraetTests */,
 				3F50E3492095F42500DDA2B7 /* Werkstuk2_Sergio_BraetUITests */,
 				3F50E3252095F42400DDA2B7 /* Products */,
+				3F00338720971A8900A6512E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,8 @@
 				3F50E3332095F42400DDA2B7 /* LaunchScreen.storyboard */,
 				3F50E3362095F42400DDA2B7 /* Info.plist */,
 				3F50E32E2095F42400DDA2B7 /* Werkstuk2_Sergio_Braet.xcdatamodeld */,
+				3FFB365020970A4700B631FC /* Fiestenstalling.swift */,
+				3F00338A20971D8600A6512E /* annotation.swift */,
 			);
 			path = Werkstuk2_Sergio_Braet;
 			sourceTree = "<group>";
@@ -197,6 +215,11 @@
 					3F50E3232095F42400DDA2B7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3F50E33A2095F42500DDA2B7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -262,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFB365120970A4700B631FC /* Fiestenstalling.swift in Sources */,
+				3F00338B20971D8600A6512E /* annotation.swift in Sources */,
 				3F50E3302095F42400DDA2B7 /* Werkstuk2_Sergio_Braet.xcdatamodeld in Sources */,
 				3F50E32A2095F42400DDA2B7 /* ViewController.swift in Sources */,
 				3F50E3282095F42400DDA2B7 /* AppDelegate.swift in Sources */,
@@ -509,6 +534,7 @@
 				3F50E3512095F42500DDA2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F50E3522095F42500DDA2B7 /* Build configuration list for PBXNativeTarget "Werkstuk2_Sergio_BraetTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +543,7 @@
 				3F50E3542095F42500DDA2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F50E3552095F42500DDA2B7 /* Build configuration list for PBXNativeTarget "Werkstuk2_Sergio_BraetUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +552,7 @@
 				3F50E3572095F42500DDA2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
