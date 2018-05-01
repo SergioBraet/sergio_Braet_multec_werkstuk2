@@ -22,43 +22,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villo" translatesAutoresizingMaskIntoConstraints="NO" id="IvD-b8-nBm">
-                                <rect key="frame" x="115" y="9" width="145" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="BKC-1f-bl8"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-X3-3Lu">
-                                <rect key="frame" x="20" y="597" width="335" height="52"/>
+                                <rect key="frame" x="0.0" y="615" width="375" height="52"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.17254901959999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="eex-73-MO5"/>
+                                    <constraint firstAttribute="height" constant="52" id="Xe1-se-dKr"/>
                                 </constraints>
-                                <state key="normal" title="Updaten"/>
+                                <state key="normal" title="Update gegevens">
+                                    <color key="titleColor" red="0.99607843137254903" green="0.73725490196078436" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="UpdateGegevens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YQN-V0-4eH"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="75w-WD-fg1">
-                                <rect key="frame" x="0.0" y="90" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="475"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pge-tE-qQC"/>
+                                </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De gegevens zijn nu nog niet geüpdated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YP-nk-EQ7">
+                                <rect key="frame" x="16" y="582" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.027450980392156862" green="0.17254901960784313" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villo" translatesAutoresizingMaskIntoConstraints="NO" id="IvD-b8-nBm">
+                                <rect key="frame" x="115" y="20" width="145" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="oXs-EF-2S9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.73333333333333328" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="75w-WD-fg1" firstAttribute="top" secondItem="IvD-b8-nBm" secondAttribute="bottom" constant="17" id="1Sj-ZG-4Mc"/>
-                            <constraint firstItem="75w-WD-fg1" firstAttribute="centerX" secondItem="QiZ-X3-3Lu" secondAttribute="centerX" id="5wO-So-ovm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QiZ-X3-3Lu" secondAttribute="bottom" constant="18" id="DFx-Fh-yc6"/>
-                            <constraint firstItem="75w-WD-fg1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F2v-Ey-hsI"/>
-                            <constraint firstItem="IvD-b8-nBm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="9" id="HoT-Yb-Svr"/>
-                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="KiH-9H-Kvo"/>
-                            <constraint firstAttribute="trailing" secondItem="75w-WD-fg1" secondAttribute="trailing" id="Kwp-Ms-vW8"/>
-                            <constraint firstItem="IvD-b8-nBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="UOD-q7-NRo"/>
-                            <constraint firstItem="IvD-b8-nBm" firstAttribute="centerX" secondItem="75w-WD-fg1" secondAttribute="centerX" id="vW9-Aw-lC8"/>
-                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="top" secondItem="75w-WD-fg1" secondAttribute="bottom" constant="8" symbolic="YES" id="xrH-Mf-hbO"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2pt-wR-YaI"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="leading" secondItem="QiZ-X3-3Lu" secondAttribute="leading" id="GzU-Sd-rQL"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JRg-CM-Wpw"/>
+                            <constraint firstItem="5YP-nk-EQ7" firstAttribute="top" secondItem="75w-WD-fg1" secondAttribute="bottom" constant="17" id="N0J-fY-4an"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="PO8-nH-v1Q"/>
+                            <constraint firstItem="5YP-nk-EQ7" firstAttribute="centerX" secondItem="QiZ-X3-3Lu" secondAttribute="centerX" id="Stg-1i-8Cs"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="trailing" secondItem="QiZ-X3-3Lu" secondAttribute="trailing" id="aBV-51-djm"/>
+                            <constraint firstAttribute="trailing" secondItem="75w-WD-fg1" secondAttribute="trailing" id="aog-dD-D7C"/>
+                            <constraint firstItem="75w-WD-fg1" firstAttribute="top" secondItem="IvD-b8-nBm" secondAttribute="bottom" constant="6" id="ffP-mi-JWe"/>
+                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="m4P-Iz-KbU"/>
+                            <constraint firstItem="QiZ-X3-3Lu" firstAttribute="top" secondItem="5YP-nk-EQ7" secondAttribute="bottom" constant="16" id="mmD-z8-dVy"/>
+                            <constraint firstItem="IvD-b8-nBm" firstAttribute="centerX" secondItem="75w-WD-fg1" secondAttribute="centerX" id="nsU-OG-nlo"/>
+                            <constraint firstItem="5YP-nk-EQ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="okq-R0-5oC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblUpdateTijd" destination="5YP-nk-EQ7" id="7Bm-at-Wyb"/>
                         <outlet property="mapview" destination="75w-WD-fg1" id="KTt-SD-OrV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="43.628185907046479"/>
         </scene>
     </scenes>
     <resources>
