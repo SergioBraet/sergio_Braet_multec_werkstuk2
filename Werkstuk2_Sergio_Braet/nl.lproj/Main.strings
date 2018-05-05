@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "De gegevens zijn nu nog niet geüpdated"; ObjectID = "5YP-nk-EQ7"; */
+"5YP-nk-EQ7.text" = "De gegevens zijn nu nog niet geüpdated";
+
+/* Class = "UINavigationItem"; title = "Kaart"; ObjectID = "5iA-Sd-cfV"; */
+"5iA-Sd-cfV.title" = "Kaart";
+
+/* Class = "UIButton"; normalTitle = "Update gegevens"; ObjectID = "QiZ-X3-3Lu"; */
+"QiZ-X3-3Lu.normalTitle" = "Update gegevens";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rbG-z3-hik"; */
+"rbG-z3-hik.text" = "Label";
