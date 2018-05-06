@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //bron: https://stackoverflow.com/questions/24591167/how-to-get-current-language-code-with-swift?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
         let preferredLanguage = NSLocale.preferredLanguages[0]
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{

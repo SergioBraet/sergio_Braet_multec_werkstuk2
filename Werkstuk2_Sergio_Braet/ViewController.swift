@@ -4,6 +4,7 @@
 //
 //  Created by student on 29/04/18.
 //  Copyright © 2018 student. All rights reserved.
+//  bron cornerRadius in DetailviewController (storyboard): https://www.youtube.com/watch?v=wz7UYNKLSZs
 //
 /*
  
@@ -141,8 +142,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         naamJuisteTaal = (splitsOpNummer?[0])! + " " + (splitsOpNaam?[0])!
                     }
                     
+                
                     let coordinate = CLLocationCoordinate2D(latitude: villo.lattitude, longitude: villo.longitude)
-                    let x = annotation(coordinate: coordinate,title: naamJuisteTaal)
+                    let x = annotation(coordinate: coordinate,title: naamJuisteTaal.components(separatedBy: "(").first!)
                     self.mapview.addAnnotation(x)
                     
                 }
