@@ -10,3 +10,12 @@
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "rbG-z3-hik"; */
 "rbG-z3-hik.text" = "Label";
+
+/* Class = "UILabel"; text = "Beschikbare fietsen"; ObjectID = "a3X-Q9-32g"; */
+"a3X-Q9-32g.text" = "Vélos disponibles:";
+
+/* Class = "UILabel"; text = "Vrije plaatsen:"; ObjectID = "444-F5-Glp"; */
+"444-F5-Glp.text" = "Places disponibles:";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "Yhw-F5-ZNj"; */
+"Yhw-F5-ZNj.text" = "État:";

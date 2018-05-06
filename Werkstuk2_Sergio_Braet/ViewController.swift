@@ -39,7 +39,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             for villo in opgehaaldeVillos{
                 managedContext?.delete(villo)
                 try! managedContext?.save()
-                
             }
             
             haalGegevensOp()
@@ -180,7 +179,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         let Fietsenstalling = NSEntityDescription.insertNewObject(forEntityName: "Fietsenstalling", into: self.managedContext!) as! Fietsenstalling
                         
                         Fietsenstalling.naam = data["name"] as? String
-                        Fietsenstalling.adres = data["address"] as? String
+                        Fietsenstalling.status = data["status"] as? String
                         Fietsenstalling.longitude = positie["lng"] as! Double
                         Fietsenstalling.lattitude = positie["lat"] as! Double
                         Fietsenstalling.beschikbare_Fietsen = Int16(data["available_bikes"] as! Int)
@@ -211,8 +210,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func updateTijd(){
         DispatchQueue.main.async {
             //bron: https://ios8programminginswift.wordpress.com/2014/08/16/get-current-date-and-time-quickcode/
-            var todaysDate:NSDate = NSDate()
-            var dateFormatter:DateFormatter = DateFormatter()
+            let todaysDate:NSDate = NSDate()
+            let dateFormatter:DateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
             let DateInFormat:String = dateFormatter.string(from: todaysDate as Date)
             //self.lblUpdateTijd.text = "Gegevens geüpdated op \(DateInFormat)"

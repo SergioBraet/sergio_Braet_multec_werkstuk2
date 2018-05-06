@@ -15,64 +15,51 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var lblStationsnaam: UILabel!
     @IBOutlet weak var lblBeschikbaar: UILabel!
-    @IBOutlet weak var lblAdres: UILabel!
     @IBOutlet weak var lblVrijePlaatsen: UILabel!
+    @IBOutlet weak var lblStatus: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let preferredLanguage = NSLocale.preferredLanguages[0]
+
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-       let nummerFiestenstalling = naamFiestenstalling?.components(separatedBy: " ").first
-        
-        print(nummerFiestenstalling)
+        let nummerFiestenstalling = naamFiestenstalling?.components(separatedBy: " ").first
     
-      let fietsenFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Fietsenstalling")
+        let fietsenFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Fietsenstalling")
         //bron contains: https://stackoverflow.com/questions/24176605/using-predicate-in-swift?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-         fietsenFetch.predicate = NSPredicate(format: "naam contains %@", nummerFiestenstalling!)
+        fietsenFetch.predicate = NSPredicate(format: "naam contains %@", nummerFiestenstalling!)
  
-      let opgehaaldePersonen:[Fietsenstalling]
+        let opgehaaldeVillos:[Fietsenstalling]
+        
         do{
-            opgehaaldePersonen = try managedContext.fetch(fietsenFetch) as! [Fietsenstalling]
-            print(opgehaaldePersonen[0].adres!)
+            opgehaaldeVillos = try managedContext.fetch(fietsenFetch) as! [Fietsenstalling]
+            
+            self.lblStationsnaam.text = naamFiestenstalling
+            self.lblBeschikbaar.text =  self.lblBeschikbaar.text! + " " + String(opgehaaldeVillos[0].beschikbare_Fietsen)
+            self.lblVrijePlaatsen.text = self.lblVrijePlaatsen.text! + " " + String(opgehaaldeVillos[0].vrije_Plaatsen)
+            
+            if preferredLanguage.contains("nl"){
+                if opgehaaldeVillos[0].status! == "OPEN"{
+                    self.lblStatus.text = self.lblStatus.text! + " " + "open"
+                }else if opgehaaldeVillos[0].status! == "CLOSED" {
+                    self.lblStatus.text = self.lblStatus.text! + " " + "gesloten"
+                }
+            } else if preferredLanguage.contains("fr"){
+                if opgehaaldeVillos[0].status! == "OPEN"{
+                    self.lblStatus.text = self.lblStatus.text! + " " + "ouvert"
+                }else if opgehaaldeVillos[0].status! == "CLOSED" {
+                    self.lblStatus.text = self.lblStatus.text! + " " + "fermé"
+                }
+            }
+            
         } catch{
-            fatalError("Failedtofetchemployees: \(error)")}
-        /*
-        
-        let nummer = spiltStationOpNummerArray![0]
-        let restNaam = spiltStationOpNummerArray![1]
-        print("Nummer: \(nummer)")
-        print("Rest station: \(restNaam)")
-        
-        let spiltStationOpTaalArray = spiltStationOpNummerArray![1].components(separatedBy: "/")
-       print(spiltStationOpTaalArray)
-       if spiltStationOpTaalArray.count>=2{
-            let nederlands = spiltStationOpTaalArray[1]
-            print("Nederlands: \(nederlands)")
-        }else{
-            let nederlands = spiltStationOpTaalArray[0]
-            print("Nederlands: \(nederlands)")
-
+            fatalError("Failedtofetchemployees: \(error)")
         }
-        let frans = spiltStationOpTaalArray[0]
-               print("Frans: \(frans)")*/
-        //
-       // var myStringArr = stationNaam?.components(separatedBy: "-")
-
-        //let preferredLanguage = NSLocale.preferredLanguages[0]
-        
-      /*  if preferredLanguage.contains("nl"){
-            print("this is nl")
-        } else if preferredLanguage.contains("fr"){
-            print("this is fr")
-        }*/
-       // self.lblStationsnaam.text = myStringArr?[1]
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
